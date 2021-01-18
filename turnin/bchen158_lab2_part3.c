@@ -1,7 +1,7 @@
 /*	Author: Biqian Cheng
  *  Partner(s) Name: 
  *	Lab Section:
- *	Assignment: Lab 2  Exercise 2
+ *	Assignment: Lab 2  Exercise 3
  *	Exercise Description: [optional - include for your own benefit]
  *
  *	I acknowledge all content contained herein, excluding template or example
@@ -28,7 +28,7 @@ int main(void) {
 		tempA3 = PINA & 0x08;
 		cntavail = 4 - (tempA3>>3) - (tempA2>>2) - (tempA1>>1) - tempA0;
 		if(cntavail == 0){
-			PORTC = cntavail;
+			PORTC = (0x80|cntavail);
 		}
 		else{
 			PORTC = cntavail;
